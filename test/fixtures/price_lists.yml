@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  valid_from: 2011-06-23
+  valid_to: 2011-06-23
+  breakfast: 9.99
+  midmorning_snack: 9.99
+  lunch: 9.99
+  snack: 9.99
+  diner: 9.99
+
+two:
+  valid_from: 2011-06-23
+  valid_to: 2011-06-23
+  breakfast: 9.99
+  midmorning_snack: 9.99
+  lunch: 9.99
+  snack: 9.99
+  diner: 9.99
