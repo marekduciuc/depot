@@ -10,7 +10,8 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.xml
   def index
-    @products = Product.all
+
+    @products = Product.order(sort_column + ' ' + sort_direction).paginate(:per_page => 5, :page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -93,4 +94,17 @@ class ProductsController < ApplicationController
       format.xml { head :ok }
     end
   end
+
+
+
+    private
+  def sort_column
+    params[:sort] || "title"
+  end
+
+  def sort_direction
+    params[:direction] || "asc"
+  end
+
+
 end

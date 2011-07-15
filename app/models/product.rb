@@ -7,7 +7,7 @@
 # Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
 #---
 class Product < ActiveRecord::Base
-  default_scope :order => 'title'
+ # default_scope :order => 'title'
   has_many :line_items
 
   before_destroy :ensure_not_referenced_by_any_line_item
