@@ -27,6 +27,18 @@ class Product < ActiveRecord::Base
     :message => 'must be a URL for GIF, JPG or PNG image.'
   }
   validates :title, :length => {:minimum => 10}
+
+
+  def self.search(search)
+    if search
+      where('title LIKE ?', "%#{search}%")
+    else
+      scoped
+    end
+  end
+
+
+
   private
 
     # ensure that there are no line items referencing this product
@@ -38,4 +50,5 @@ class Product < ActiveRecord::Base
         return false
       end
     end
+
 end

@@ -11,10 +11,11 @@ class ProductsController < ApplicationController
   # GET /products.xml
   def index
 
-    @products = Product.order(sort_column + ' ' + sort_direction).paginate(:per_page => 5, :page => params[:page])
+    @products = Product.search(params[:search]).order(sort_column + ' ' + sort_direction).paginate(:per_page => 5, :page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
+      format.js
       format.xml { render :xml => @products }
     end
   end
