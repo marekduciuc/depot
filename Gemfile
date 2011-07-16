@@ -7,7 +7,9 @@ gem 'rails', '3.0.7'
 
 gem 'sqlite3'
 gem 'mysql'
-gem 'rake', '~> 0.8.7' 
+gem 'rake', '~> 0.8.7'
+gem 'will_paginate', '3.0.pre2'
+gem "jquery-rails"
 
 # Use unicorn as the web server
 # gem 'unicorn'
